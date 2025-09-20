@@ -1,0 +1,16 @@
+:root {
+  --fe-bg: #ffffff;
+  --fe-text: #111111;
+  --fe-accent: #ff7a1a;
+  --fe-accent-foreground: #ffffff;
+  --fe-border: #e5e7eb;
+  --fe-radius: 0.5rem;
+}
+
+[data-theme="dark"] {
+  --fe-bg: #111111;
+  --fe-text: #f3f3f3;
+  --fe-accent: #ff7a1a;
+  --fe-accent-foreground: #ffffff;
+  --fe-border: #374151;
+}
