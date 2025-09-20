@@ -1,15 +1,26 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}", "./.storybook/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./.storybook/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
-        bg: "var(--fe-bg)",
-        text: "var(--fe-text)",
-        accent: "var(--fe-accent)",
-        "accent-foreground": "var(--fe-accent-foreground)",
-        border: "var(--fe-border)",
+        bg: {
+          DEFAULT: "var(--fe-bg)",
+        },
+        text: {
+          DEFAULT: "var(--fe-text)",
+        },
+        accent: {
+          DEFAULT: "var(--fe-accent)",
+          foreground: "var(--fe-accent-foreground)",
+        },
+        border: {
+          DEFAULT: "var(--fe-border)",
+        },
       },
       borderRadius: {
         DEFAULT: "var(--fe-radius)",
@@ -18,5 +29,4 @@ const config: Config = {
   },
   plugins: [],
 };
-
 export default config;
