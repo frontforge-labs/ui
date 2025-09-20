@@ -14,3 +14,64 @@
   --fe-accent-foreground: #ffffff;
   --fe-border: #374151;
 }
+
+/* --- Skeleton theme (library-wide) --- */
+@keyframes fe-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.fe-skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--fe-radius);
+  background-color: var(--fe-skeleton-base, var(--fe-border));
+}
+
+.fe-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: fe-shimmer 1.4s linear infinite;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .fe-skeleton {
+  --fe-skeleton-base: color-mix(in srgb, var(--fe-border), black 25%);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.3s ease-out;
+}
