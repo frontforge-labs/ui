@@ -28,7 +28,7 @@ export function Sidebar({
     <nav
       aria-label="Sidebar"
       className={cn(
-        "h-screen w-64 border-r border-border bg-bg text-text flex flex-col",
+        "h-screen w-64 border-r border-border bg-surface-1 text-text flex flex-col shadow-sm",
         collapsed && "w-16",
         className
       )}
@@ -45,10 +45,10 @@ export function Sidebar({
                     onSelect?.(item.id);
                   }}
                   className={cn(
-                    "flex w-full items-center rounded px-2 py-2 text-sm focus:outline-none",
+                    "flex w-full items-center rounded px-2 py-2 text-sm focus:outline-none transition-colors",
                     isActive
-                      ? "bg-accent text-accent-foreground"
-                      : "hover:bg-border"
+                      ? "bg-accent text-accent-foreground shadow-sm"
+                      : "hover:bg-surface-2 text-text-muted hover:text-text"
                   )}
                 >
                   {item.icon && (

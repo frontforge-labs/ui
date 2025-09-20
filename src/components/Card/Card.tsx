@@ -1,15 +1,42 @@
 import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../utils/cn";
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
+const cardVariants = cva(
+  "rounded border border-border text-text transition-all duration-200",
+  {
+    variants: {
+      variant: {
+        default: "bg-surface-1 shadow-sm hover:shadow-md",
+        elevated: "bg-surface-2 shadow-md hover:shadow-lg",
+        floating: "bg-surface-3 shadow-lg hover:shadow-xl",
+        flat: "bg-bg shadow-none",
+      },
+      interactive: {
+        true: "cursor-pointer hover:border-accent/20",
+        false: "",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      interactive: false,
+    },
+  }
+);
 
-export function Card({ className, ...props }: CardProps) {
+export interface CardProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof cardVariants> {}
+
+export function Card({
+  className,
+  variant,
+  interactive,
+  ...props
+}: CardProps) {
   return (
     <div
-      className={cn(
-        "rounded border border-border bg-bg text-text shadow-sm",
-        className
-      )}
+      className={cn(cardVariants({ variant, interactive }), className)}
       {...props}
     />
   );
@@ -21,7 +48,7 @@ export function CardHeader({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("px-4 py-2 border-b border-border font-medium", className)}
+      className={cn("px-6 py-4 border-b border-border font-semibold", className)}
       {...props}
     />
   );
@@ -31,7 +58,7 @@ export function CardBody({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("p-4", className)} {...props} />;
+  return <div className={cn("p-6", className)} {...props} />;
 }
 
 export function CardFooter({
@@ -40,7 +67,7 @@ export function CardFooter({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("px-4 py-2 border-t border-border", className)}
+      className={cn("px-6 py-4 border-t border-border", className)}
       {...props}
     />
   );

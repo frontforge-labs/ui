@@ -1,18 +1,97 @@
 :root {
+  /* Base colors */
   --fe-bg: #ffffff;
-  --fe-text: #111111;
-  --fe-accent: #ff7a1a;
-  --fe-accent-foreground: #ffffff;
+  --fe-text: #111827;
+  --fe-text-muted: #6b7280;
   --fe-border: #e5e7eb;
+
+  /* Surface levels for depth */
+  --fe-surface-1: #fafafa;
+  --fe-surface-2: #f5f5f5;
+  --fe-surface-3: #f0f0f0;
+
+  /* Brand colors */
+  --fe-accent: #ff7a1a;
+  --fe-accent-hover: #e66600;
+  --fe-accent-foreground: #ffffff;
+
+  /* Semantic colors */
+  --fe-success: #10b981;
+  --fe-success-hover: #059669;
+  --fe-success-foreground: #ffffff;
+  --fe-success-muted: #d1fae5;
+
+  --fe-warning: #f59e0b;
+  --fe-warning-hover: #d97706;
+  --fe-warning-foreground: #ffffff;
+  --fe-warning-muted: #fef3c7;
+
+  --fe-error: #ef4444;
+  --fe-error-hover: #dc2626;
+  --fe-error-foreground: #ffffff;
+  --fe-error-muted: #fee2e2;
+
+  --fe-info: #3b82f6;
+  --fe-info-hover: #2563eb;
+  --fe-info-foreground: #ffffff;
+  --fe-info-muted: #dbeafe;
+
+  /* Design tokens */
   --fe-radius: 0.5rem;
+  --fe-radius-sm: 0.25rem;
+  --fe-radius-md: 0.75rem;
+  --fe-radius-lg: 1rem;
+
+  /* Shadows */
+  --fe-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --fe-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --fe-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --fe-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 [data-theme="dark"] {
-  --fe-bg: #111111;
-  --fe-text: #f3f3f3;
+  /* Base colors */
+  --fe-bg: #0a0a0a;
+  --fe-text: #f5f5f5;
+  --fe-text-muted: #a3a3a3;
+  --fe-border: #262626;
+
+  /* Surface levels for depth */
+  --fe-surface-1: #171717;
+  --fe-surface-2: #262626;
+  --fe-surface-3: #404040;
+
+  /* Brand colors (same in dark) */
   --fe-accent: #ff7a1a;
+  --fe-accent-hover: #e66600;
   --fe-accent-foreground: #ffffff;
-  --fe-border: #374151;
+
+  /* Semantic colors adjusted for dark */
+  --fe-success: #10b981;
+  --fe-success-hover: #059669;
+  --fe-success-foreground: #ffffff;
+  --fe-success-muted: #064e3b;
+
+  --fe-warning: #f59e0b;
+  --fe-warning-hover: #d97706;
+  --fe-warning-foreground: #ffffff;
+  --fe-warning-muted: #78350f;
+
+  --fe-error: #ef4444;
+  --fe-error-hover: #dc2626;
+  --fe-error-foreground: #ffffff;
+  --fe-error-muted: #7f1d1d;
+
+  --fe-info: #3b82f6;
+  --fe-info-hover: #2563eb;
+  --fe-info-foreground: #ffffff;
+  --fe-info-muted: #1e3a8a;
+
+  /* Shadows adjusted for dark - using colored shadows for visibility */
+  --fe-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.8), 0 1px 1px 0 rgb(255 255 255 / 0.05);
+  --fe-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.9), 0 1px 2px -1px rgb(0 0 0 / 0.9), 0 0 0 1px rgb(255 255 255 / 0.05);
+  --fe-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.9), 0 2px 4px -2px rgb(0 0 0 / 0.9), 0 0 0 1px rgb(255 255 255 / 0.1);
+  --fe-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.9), 0 4px 6px -4px rgb(0 0 0 / 0.9), 0 0 0 1px rgb(255 255 255 / 0.1);
 }
 
 /* --- Skeleton theme (library-wide) --- */
