@@ -19,3 +19,4 @@ export * from "./components/Tooltip";
 export * from "./components/Popover";
 export * from "./components/Sidebar";
 export * from "./components/Form";
+export * from "./components/Navbar";
