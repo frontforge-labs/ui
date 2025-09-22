@@ -79,7 +79,11 @@ export function ToolContainer({
               </Button>
 
               {onReset && (
-                <Button onClick={onReset} variant="outline" className="w-full">
+                <Button
+                  onClick={onReset}
+                  variant="secondary"
+                  className="w-full"
+                >
                   <RotateCcw size={16} className="mr-2" />
                   Reset
                 </Button>
