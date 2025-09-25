@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Breadcrumb } from './Breadcrumb';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Breadcrumb } from "./Breadcrumb";
 
 const meta: Meta<typeof Breadcrumb> = {
-  title: 'Components/Breadcrumb',
+  title: "Components/Breadcrumb",
   component: Breadcrumb,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
     items: {
-      control: 'object',
+      control: "object",
     },
   },
 };
@@ -21,29 +21,26 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     items: [
-      { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Laptop' },
+      { label: "Home", href: "/" },
+      { label: "Products", href: "/products" },
+      { label: "Laptop" },
     ],
   },
 };
 
 export const Simple: Story = {
   args: {
-    items: [
-      { label: 'Home', href: '/' },
-      { label: 'Current Page' },
-    ],
+    items: [{ label: "Home", href: "/" }, { label: "Current Page" }],
   },
 };
 
 export const Deep: Story = {
   args: {
     items: [
-      { label: 'FrontEnzo', href: '/' },
-      { label: 'Tools', href: '/tools' },
-      { label: 'Color', href: '/tools/color' },
-      { label: 'Gradient Generator' },
+      { label: "FrontForge", href: "/" },
+      { label: "Tools", href: "/tools" },
+      { label: "Color", href: "/tools/color" },
+      { label: "Gradient Generator" },
     ],
   },
 };
@@ -51,9 +48,9 @@ export const Deep: Story = {
 export const CustomSeparator: Story = {
   args: {
     items: [
-      { label: 'Home', href: '/' },
-      { label: 'Products', href: '/products' },
-      { label: 'Laptop' },
+      { label: "Home", href: "/" },
+      { label: "Products", href: "/products" },
+      { label: "Laptop" },
     ],
     separator: <span className="text-gray-400">/</span>,
   },

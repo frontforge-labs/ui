@@ -7,7 +7,11 @@ export interface AppIconProps {
   showText?: boolean;
 }
 
-export function AppIcon({ size = 32, className, showText = false }: AppIconProps) {
+export function AppIcon({
+  size = 32,
+  className,
+  showText = false,
+}: AppIconProps) {
   return (
     <div className={cn("flex items-center gap-3", className)}>
       {/* Beautiful gradient icon with geometric design */}
@@ -32,7 +36,7 @@ export function AppIcon({ size = 32, className, showText = false }: AppIconProps
       </div>
 
       {showText && (
-        <span className="font-bold text-lg text-text">FrontEnzo</span>
+        <span className="font-bold text-lg text-text">FrontForge</span>
       )}
     </div>
   );

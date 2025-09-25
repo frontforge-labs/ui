@@ -82,7 +82,7 @@ export function Sidebar({
           <AppIcon size={32} />
           {!collapsed && (
             <div>
-              <span className="font-bold text-lg text-text">FrontEnzo</span>
+              <span className="font-bold text-lg text-text">FrontForge</span>
               <p className="text-xs text-text-muted">CSS Tools & Generators</p>
             </div>
           )}

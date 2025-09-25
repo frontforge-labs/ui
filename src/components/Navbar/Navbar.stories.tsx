@@ -17,7 +17,7 @@ export const Default: Story = {
 
     return (
       <Navbar
-        brand={<span className="font-bold text-accent">FrontEnzo</span>}
+        brand={<span className="font-bold text-accent">FrontForge</span>}
         items={[
           { id: "home", label: "Home" },
           { id: "about", label: "About" },
