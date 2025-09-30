@@ -22,7 +22,7 @@ export function PreviewPanel({
         <h3 className="text-lg font-semibold">{title}</h3>
       </div>
       <div className="p-6">
-        <div className="bg-white dark:bg-gray-50 rounded-lg p-8 min-h-[300px] flex items-center justify-center shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-gray-50 rounded-lg p-8 min-h-[300px] max-h-[600px] flex items-center justify-center shadow-sm border border-gray-200 overflow-auto">
           {children || (
             <div className="w-48 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-medium">
               Preview Element
