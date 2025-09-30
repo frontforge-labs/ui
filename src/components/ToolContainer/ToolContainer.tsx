@@ -16,6 +16,7 @@ export interface ToolContainerProps {
   icon?: React.ReactNode;
   breadcrumbs?: React.ReactNode;
   className?: string;
+  iconBgClassName?: string;
 }
 
 export function ToolContainer({
@@ -29,6 +30,7 @@ export function ToolContainer({
   icon,
   breadcrumbs,
   className,
+  iconBgClassName,
 }: ToolContainerProps) {
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">(
     "idle"
@@ -53,6 +55,7 @@ export function ToolContainer({
         subtitle={description}
         icon={icon}
         breadcrumbs={breadcrumbs}
+        iconBgClassName={iconBgClassName}
       />
 
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
@@ -111,7 +114,13 @@ export function ToolContainer({
               <h3 className="text-lg font-semibold mb-4">Preview</h3>
               <div className="bg-white rounded-lg p-8 min-h-[200px] flex items-center justify-center shadow-sm">
                 {previewElement || (
-                  <div className="w-48 h-32 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-medium">
+                  <div
+                    className={cn(
+                      "w-48 h-32 rounded-lg flex items-center justify-center text-white font-medium",
+                      iconBgClassName ||
+                        "bg-gradient-to-r from-blue-500 to-purple-600"
+                    )}
+                  >
                     Preview Element
                   </div>
                 )}
