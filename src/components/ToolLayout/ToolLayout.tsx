@@ -21,6 +21,7 @@ export interface ToolLayoutProps {
   controlsGridCols?: "auto" | 1 | 2 | 3;
   allowCSSEditing?: boolean;
   className?: string;
+  iconBgClassName?: string;
 }
 
 export function ToolLayout({
@@ -38,6 +39,7 @@ export function ToolLayout({
   controlsGridCols = "auto",
   allowCSSEditing = true,
   className,
+  iconBgClassName,
 }: ToolLayoutProps) {
   return (
     <div className={cn("max-w-7xl mx-auto p-6", className)}>
@@ -47,6 +49,7 @@ export function ToolLayout({
         subtitle={description}
         icon={icon}
         breadcrumbs={breadcrumbs}
+        iconBgClassName={iconBgClassName}
       />
 
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
