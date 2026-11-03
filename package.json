@@ -7,12 +7,21 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
-    "./styles.css": "./styles.css"
+    "./styles.css": "./styles.css",
+    "./package.json": "./package.json"
   },
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist",
     "styles.css"
@@ -21,11 +30,12 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "prepublishOnly": "npm run build",
+    "prepare": "tsup",
     "lint": "eslint .",
     "test": "vitest run --project unit",
     "test:stories": "vitest run --project storybook",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build && publint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -41,6 +51,7 @@
   },
   "homepage": "https://github.com/frontforge-labs/ui#readme",
   "peerDependencies": {
+    "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -59,8 +70,6 @@
     "@vitest/browser": "3.2.4",
     "@vitest/coverage-v8": "3.2.4",
     "autoprefixer": "^10.4.21",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -72,15 +81,17 @@
     "playwright": "^1.55.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
+    "publint": "^0.3.25",
     "storybook": "^9.1.7",
-    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^3.4.17",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.72.1",
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "lucide-react": "^0.544.0",
-    "tailwindcss": "^3.4.17"
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1"
   }
 }

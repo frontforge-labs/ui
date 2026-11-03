@@ -36,3 +36,4 @@ export * from "./components/ControlGroup";
 export * from "./components/FullWidthGroup";
 export * from "./theme";
 export * from "./utils/clipboard";
+export * from "./utils/cn";

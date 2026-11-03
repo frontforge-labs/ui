@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cn } from "./cn";
+import { cn } from "../index";
 
 describe("cn", () => {
   it("merges conflicting Tailwind utilities, keeping the last value", () => {
