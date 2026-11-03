@@ -1,15 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Sidebar } from "./Sidebar";
 import {
-  Home,
   Settings,
-  User,
   Palette,
   Type,
   Zap,
-  Grid,
-  Play,
-  Code,
 } from "lucide-react";
 import React from "react";
 import { ThemeProvider } from "../../theme/ThemeProvider";

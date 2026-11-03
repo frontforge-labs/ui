@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- Preserve the public generic trigger API until the UI-07 overlay rewrite. */
 import * as React from "react";
 import { cn } from "../../utils/cn";
 

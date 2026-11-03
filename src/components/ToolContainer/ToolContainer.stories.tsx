@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ToolContainer } from "./ToolContainer";
 import { Input } from "../Input";
 import { Select } from "../Select";
-import { Button } from "../Button";
 import { Settings } from "lucide-react";
 
 const meta: Meta<typeof ToolContainer> = {
@@ -23,6 +22,7 @@ const mockCSS = `.gradient-element {
   padding: 20px;
 }`;
 
+/* eslint-disable jsx-a11y/label-has-associated-control -- Demo-only labels need explicit associations in a separate accessibility pass. */
 const Controls = () => (
   <div className="space-y-4">
     <div>

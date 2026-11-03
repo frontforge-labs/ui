@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cn } from "../../utils/cn";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type -- Keep the public interface augmentable until UI-09 revisits these props.
 export interface SwitchProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {}
 

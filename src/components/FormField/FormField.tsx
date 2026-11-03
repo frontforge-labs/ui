@@ -15,7 +15,7 @@ export interface FormFieldBaseProps {
   className?: string;
 }
 
-export function FormField<T extends { id?: string } = any>({
+export function FormField<T extends { id?: string } = { id?: string }>({
   id,
   label,
   description,
